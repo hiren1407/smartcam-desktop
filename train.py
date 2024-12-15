@@ -34,14 +34,14 @@ def run(faculty_id):
             message=insertS(faculty_id)
             
             #print(message)
-            if message=='Inserted data successfully':
+            if message=='Inserted Face data successfully':
                 webcam.release()
                 cv2.destroyAllWindows()
                 return 'Record added succesfully'
             else:
                 webcam.release()
                 cv2.destroyAllWindows()
-                return "Record already exist"
+                return "something went wrong"
             break
         elif key == ord('e'):
             webcam.release()

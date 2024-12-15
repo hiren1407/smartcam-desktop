@@ -41,7 +41,9 @@ def run():
     #data containing face,name and ids are added in respective arrays
     for i in data:
         
-        
+        if len(i["facialEncoding"])!=128:
+            
+            continue
         
         known_face_encodings.append(np.asarray(i["facialEncoding"]))
         known_face_details.append([i["name"],i["fid"]])

@@ -20,7 +20,7 @@ def insertFaceData(data,fid):
 
     
 def read():
-    data=db.users.find()
+    data=db.users.find({'role':"faculty"})
     
     
     return data
